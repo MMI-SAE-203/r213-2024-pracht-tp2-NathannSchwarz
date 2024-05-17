@@ -13,11 +13,19 @@ onErrorCaptured((err, instance, info) => {
     <nav>
       <ul>
         <li>
-          <RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink>
+          <RouterLink to="/">Accueil</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/offres">Toutes les offres</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/offres/favori">Favori</RouterLink>
         </li>
       </ul>
     </nav>
   </header>
+
+  
     
   <RouterView v-slot="{ Component }">
 
