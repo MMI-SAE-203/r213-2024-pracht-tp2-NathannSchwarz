@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/types'
+import type { MaisonResponse } from '@/pocketbase-types'
+import ImgPb from './ImgPb.vue'
 
-const props = defineProps<MaisonRecord>()
+const props = defineProps<MaisonResponse<any>>()
+
 </script>
 <template>
   <div
@@ -11,10 +13,8 @@ const props = defineProps<MaisonRecord>()
       <div
         class="w-[394.67px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
       ></div>
-      <img
-        src="/src/assets/constantin-shim-jjgozjt9Ass-unsplash.jpg"
-        class="w-[394.67px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
-      />
+      <ImgPb :record="props" :filename="image" :width="387" :height="235" class="w-[394.67px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
+      
     </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4 px-5 py-7"
@@ -216,5 +216,6 @@ const props = defineProps<MaisonRecord>()
         </div>
       </div>
     </div>
+    
   </div>
 </template>

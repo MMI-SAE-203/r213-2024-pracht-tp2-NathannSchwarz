@@ -13,3 +13,5 @@ export interface MaisonRecord {
   image: string
   updated: string
 }
+
+
